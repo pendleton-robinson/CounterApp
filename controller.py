@@ -9,9 +9,11 @@ class CounterController(QMainWindow):
 
         self.model = CounterModel()
 
+        # Load the Qt designer UI
         self.ui = Ui_root()
         self.ui.setupUi(self)
 
+        # Connect the Buttons
         self.ui.btnIncrement.clicked.connect(self.increment)
         self.ui.btnDecrement.clicked.connect(self.decrement)
 
